@@ -5,21 +5,21 @@
 class SshSearch < Formula
   desc "Fast command-line tool to search through your SSH config file"
   homepage "https://github.com/gido/ssh-search"
-  version "0.1.0"
+  version "2.0.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gido/ssh-search/releases/download/v0.1.0/ssh-search_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "441ddd995277f6929b0d2aa639e50af7103773a0bf39d35e3109b521312639f4"
+      url "https://github.com/gido/ssh-search/releases/download/v2.0.0/ssh-search_2.0.0_Darwin_x86_64.tar.gz"
+      sha256 "9cb85616967eb68bdc7a0a24da2d8e1deef14ff21028fb656fc93fe992761909"
 
       def install
         bin.install "ssh-search"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gido/ssh-search/releases/download/v0.1.0/ssh-search_0.1.0_Darwin_arm64.tar.gz"
-      sha256 "7825a470f9a2de3532f7b84bbffe8d11cf9b04363a2623839d8367b7b4d55d7c"
+      url "https://github.com/gido/ssh-search/releases/download/v2.0.0/ssh-search_2.0.0_Darwin_arm64.tar.gz"
+      sha256 "07fc37ce12cd632c3b31aec3843bd3495994e99e181ee45315130c8e1fe79c86"
 
       def install
         bin.install "ssh-search"
@@ -29,15 +29,15 @@ class SshSearch < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gido/ssh-search/releases/download/v0.1.0/ssh-search_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "a73a9693c10084569783f987dd6f099c63e52f7ad776b5ec1780506bf86596e9"
+      url "https://github.com/gido/ssh-search/releases/download/v2.0.0/ssh-search_2.0.0_Linux_x86_64.tar.gz"
+      sha256 "07432f2d45f80dd512cc5663100deb5edb8e0586674534cd05cac6c43d591b43"
       def install
         bin.install "ssh-search"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gido/ssh-search/releases/download/v0.1.0/ssh-search_0.1.0_Linux_arm64.tar.gz"
-      sha256 "b4bb6b76a4743527dd36fa12bc375b7d6a256d5918db08492566962cbe7375bb"
+      url "https://github.com/gido/ssh-search/releases/download/v2.0.0/ssh-search_2.0.0_Linux_arm64.tar.gz"
+      sha256 "de3201147eb866718d20ef33c73b1bbb347db70e70b81f51b2336c458538f2f7"
       def install
         bin.install "ssh-search"
       end
