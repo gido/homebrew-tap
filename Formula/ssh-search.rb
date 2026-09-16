@@ -5,23 +5,23 @@
 class SshSearch < Formula
   desc "Fast command-line tool to search through your SSH config file"
   homepage "https://github.com/gido/ssh-search"
-  version "2.0.0"
+  version "2.0.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gido/ssh-search/releases/download/v2.0.0/ssh-search_2.0.0_Darwin_x86_64.tar.gz"
-      sha256 "9cb85616967eb68bdc7a0a24da2d8e1deef14ff21028fb656fc93fe992761909"
+      url "https://github.com/gido/ssh-search/releases/download/v2.0.1/ssh-search_2.0.1_Darwin_x86_64.tar.gz"
+      sha256 "11d8e8c729abd6c81070dadbcdbfeba324add441f01ae62a343d2c6dbf28d716"
 
-      def install
+      define_method(:install) do
         bin.install "ssh-search"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gido/ssh-search/releases/download/v2.0.0/ssh-search_2.0.0_Darwin_arm64.tar.gz"
-      sha256 "07fc37ce12cd632c3b31aec3843bd3495994e99e181ee45315130c8e1fe79c86"
+      url "https://github.com/gido/ssh-search/releases/download/v2.0.1/ssh-search_2.0.1_Darwin_arm64.tar.gz"
+      sha256 "88b4338316cde683d649d6d7de592d61b4939f64f4ea23f4116f44f9883efaeb"
 
-      def install
+      define_method(:install) do
         bin.install "ssh-search"
       end
     end
@@ -29,16 +29,16 @@ class SshSearch < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gido/ssh-search/releases/download/v2.0.0/ssh-search_2.0.0_Linux_x86_64.tar.gz"
-      sha256 "07432f2d45f80dd512cc5663100deb5edb8e0586674534cd05cac6c43d591b43"
-      def install
+      url "https://github.com/gido/ssh-search/releases/download/v2.0.1/ssh-search_2.0.1_Linux_x86_64.tar.gz"
+      sha256 "fcbd3fa57eda9da4939f3396907cb99bde09f560065ab68785548982748436e0"
+      define_method(:install) do
         bin.install "ssh-search"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gido/ssh-search/releases/download/v2.0.0/ssh-search_2.0.0_Linux_arm64.tar.gz"
-      sha256 "de3201147eb866718d20ef33c73b1bbb347db70e70b81f51b2336c458538f2f7"
-      def install
+      url "https://github.com/gido/ssh-search/releases/download/v2.0.1/ssh-search_2.0.1_Linux_arm64.tar.gz"
+      sha256 "9f359f6802cbb812d8b2a725c22b8080dd14ef68260495eebb5e4f1d2b5234a6"
+      define_method(:install) do
         bin.install "ssh-search"
       end
     end
